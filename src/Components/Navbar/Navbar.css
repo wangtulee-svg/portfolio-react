@@ -1,0 +1,151 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+
+.green-logo{
+    filter: invert(58%) sepia(44%) saturate(746%) hue-rotate(142deg) brightness(93%) contrast(87%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.green-logo:hover {
+    filter: 
+    drop-shadow(0 0 10px #00ff88)
+    drop-shadow(0 0 20px #ff15e4);
+    animation: logoGlow 1.5s ease-in-out infinite alternate;
+    transform: scale(1.1);
+}
+
+@keyframes logoGlow {
+    0% {
+        filter: drop-shadow(0 0 5px #00ff88);
+    }
+    100% {
+        filter: drop-shadow(0 0 15px #ff15e4);
+    }
+}
+
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+.nav-connect{
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #24ce87 0.36%, #15ff86a3 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-connect:hover{
+    transform: scale(1.05);    /* This scale is makes it button contact with me has animation hover increase size when we point mouse at it */
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* take li img from <ul className="nav-menu"> */
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+/* className='anchor-link' */
+.anchor-link {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* This change color when active */
+.nav-menu .active-nav {
+    color: #2ee8adb6;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+/*this change icon color from origin*/
+.nav-menu .active-icon {
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.nav-mob-close{
+    display: none;
+}
+.nav-mob-open{
+    display: none;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .green-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media(max-width:768px){
+    .navbar{
+        margin: 20px 50px;
+    }
+    .green-logo{
+        width: 80px;
+        height: 80px;
+    }
+    .nav-connect{
+        display: none;
+    }
+    .nav-mob-open{
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+    .nav-mob-close{
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+        width: 30px;
+    }
+    .nav-menu{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1F0016;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+    .nav-menu li{
+        font-size: 23px;
+        padding-left: 80px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .green-logo {
+        width: 60px;
+        height: 60px;
+    }
+}

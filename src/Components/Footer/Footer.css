@@ -1,0 +1,128 @@
+/* <div className='footer'> */
+.footer{
+    margin: 50px 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* <div className='footer-top'> */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* This ccode change logo Alex color */
+.green-logo{
+    filter: invert(58%) sepia(44%) saturate(746%) hue-rotate(142deg) brightness(93%) contrast(87%);
+}
+
+/* <div className='footer-top-left'> */
+.footer-top-left p {
+    font-size: 20px;
+    max-width: 400px;
+}
+
+/* <div className='footer-top-right'> */
+.footer-top-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* <div className='footer-email-input'> */
+.footer-email-input{
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: #32323B;
+    padding-right: 80px;
+}
+
+.footer-email-input input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 18px;
+}
+
+.green-logo {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.green-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* this code change <img src={user_icon} alt="" className='user-icon'/> Color */
+.user-icon{
+     filter: invert(58%) sepia(44%) saturate(746%) hue-rotate(142deg) brightness(93%) contrast(87%);
+}
+
+/* <div className='footer-subscribe'> */
+.footer-subscribe {
+    font-size: 20px;
+    padding: 22px 50px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #24ce87 -5.09%, #15ff86a3 106.28%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* <div className='footer-bottom'> */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+/* <div className='footer-bottom-right'> */
+.footer-bottom-right {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-email-input:hover {
+    border: 2px solid rgb(27, 190, 98);
+}
+
+.footer-subscribe:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.footer, 
+.footer p, 
+.footer input, 
+.footer div {
+    font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+}
+
+.footer-email-input input::placeholder {
+    font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+}
+
+
+
+/* This code below is for responsive oage footer */
+@media(max-width:768px){
+    .footer{
+        margin: 50px 70px;
+    }
+    .footer-top{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-bottom{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+}
